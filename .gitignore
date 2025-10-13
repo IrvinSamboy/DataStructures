@@ -1,0 +1,72 @@
+# Compiled object files
+*.o
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.dll
+*.dylib
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug files
+*.dSYM/
+*.stackdump
+*.map
+
+# Build directories
+/build/
+bin/
+Debug/
+Release/
+out/
+dist/
+
+# Dependency files
+*.d
+*.dep
+
+# Compiler-specific files
+*.gcno
+*.gcda
+*.gcov
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.code-workspace
+*.cbp       # Code::Blocks project file
+*.layout
+*.depend
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Linux
+*~
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
