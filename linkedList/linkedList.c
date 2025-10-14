@@ -103,6 +103,39 @@ void freeList(Node* head){
     
 }
 
+Node* reverseList(Node* list) {
+    Node* listReversed = NULL;
+    Node* prevList = NULL;
+    Node* prevListReversed = listReversed;
+    while (list != NULL)
+    {
+        if(prevList != NULL){
+            if(listReversed == NULL){
+                listReversed = createNode(prevList->data);
+                listReversed->next = NULL;
+            }
+            else{
+                prevListReversed=listReversed;
+                listReversed = createNode(prevList->data);
+                listReversed->next=prevListReversed;
+            }
+        }
+
+        prevList = list;
+        
+        if(list->next == NULL) {
+            prevListReversed=listReversed;
+            listReversed = createNode(list->data);
+            listReversed->next=prevListReversed;
+        }
+
+        list = list->next;        
+
+    }
+    
+    return listReversed;
+}
+
 int main(){
     Node* head = NULL;
 
@@ -130,6 +163,8 @@ int main(){
     delete(&head, 80);
     printf("List delete head \n");
     printList(head);
+
+    printList(reverseList(head));
 
     freeList(head);
 
